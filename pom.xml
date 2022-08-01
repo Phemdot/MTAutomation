@@ -56,6 +56,12 @@
       <artifactId>cucumber-testng</artifactId>
       <version>6.10.4</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+    <dependency>
+      <groupId>io.appium</groupId>
+      <artifactId>java-client</artifactId>
+      <version>7.0.0</version>
+    </dependency>
 
 
 
