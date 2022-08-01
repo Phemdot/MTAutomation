@@ -3,7 +3,7 @@
 <suite name="TestSuite" verbose="1" >
     <test name="SmokeTest" >
         <classes>
-            <class name="TestSample" />
+            <class name="testrunners.TestRunner" />
         </classes>
     </test>
 
