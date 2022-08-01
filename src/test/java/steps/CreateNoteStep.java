@@ -5,6 +5,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.CreateNotePage;
+
 import static variables.GlobalVariables.*;
 import static pages.CreateNotePage.*;
 import java.util.concurrent.TimeUnit;
