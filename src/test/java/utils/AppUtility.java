@@ -2,6 +2,8 @@ package utils;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -23,8 +25,11 @@ public class AppUtility {
             cap.setCapability("udid", udid);
             cap.setCapability("platformName", "Android");
             cap.setCapability("platformVersion", "6.0.1");
+            //cap.setCapability("app", System.getProperty("user.dir")+"\\app\\app-mock-debug.apk");
             cap.setCapability("appPackage", appPackage);
             cap.setCapability("appActivity", appActivity);
+            cap.setCapability("systemPort","8203");
+
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
             driver = new AppiumDriver(url, cap);
