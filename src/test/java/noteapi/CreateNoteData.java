@@ -4,6 +4,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
+import java.time.*;
 
 public class CreateNoteData {
 
@@ -11,6 +12,7 @@ public class CreateNoteData {
 
     private static String title, first_name,last_name, date;
     public static String note_title;
+    private String zdt;
 
     @Test
     public void createNewUser(){
@@ -36,8 +38,21 @@ public class CreateNoteData {
         note_title = title +" " + first_name +" " + " " + last_name;
         System.out.println(note_title);
 
+        Instant instant = Instant.parse( date );
+
+        ZoneId zoneId = ZoneId.of( "Indian/Cocos" ); ZonedDateTime zdt = ZonedDateTime.ofInstant( instant , zoneId );
+        System.out.println(zdt);
+
 
     }
+
+    /*public String returnNoteTitle(){
+        return note_title;
+    }
+
+    public String returnNoteBody(){
+        return zdt;
+    }*/
 
 
 
