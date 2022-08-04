@@ -38,16 +38,6 @@ public class BasePage {
         return elem.getText();
     }
 
-    public void waitForElementToBeVisible(WebElement elem) {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(elem));
-    }
-
-    public void waitForElementToBePresent(By by) {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(by));
-    }
-
     public void type(WebElement elem, String text) {
         elem.sendKeys(text);
     }

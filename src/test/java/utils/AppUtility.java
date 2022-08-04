@@ -16,6 +16,9 @@ public class AppUtility {
     private static String appActivity = ConfigFileReader.getConfigPropertyVal("appActivity");
     private static String deviceName = ConfigFileReader.getConfigPropertyVal("deviceName");
     private static String udid = ConfigFileReader.getConfigPropertyVal("udid");
+    private static String app = ConfigFileReader.getConfigPropertyVal("absolutePathToAUT");
+    private static String platformVersion = ConfigFileReader.getConfigPropertyVal("platformVersion");
+    private static String platformName = ConfigFileReader.getConfigPropertyVal("platformName");
     public static AppiumDriver getAndroidDriver(){
 
 
@@ -23,12 +26,10 @@ public class AppUtility {
             DesiredCapabilities cap = new DesiredCapabilities();
             cap.setCapability("deviceName", deviceName);
             cap.setCapability("udid", udid);
-            cap.setCapability("platformName", "Android");
-            cap.setCapability("platformVersion", "6.0.1");
-            //cap.setCapability("app", System.getProperty("user.dir")+"\\app\\app-mock-debug.apk");
-            cap.setCapability("appPackage", appPackage);
-            cap.setCapability("appActivity", appActivity);
-            cap.setCapability("systemPort","8203");
+            cap.setCapability("platformName", platformName);
+            cap.setCapability("platformVersion", platformVersion);
+            cap.setCapability("app", app);
+            cap.setCapability("systemPort","8210");
 
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
